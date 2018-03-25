@@ -7,7 +7,12 @@
   </head>
   <body>
     <p>
-
+      Vamos criar nosso primeiro jogo! O usuário começa com 100 pontos.Deve ser apresentado 2 radio buttons<br>
+      ,com os valores par e impar,e um campo de texto valor da resposta.Após preencher todos os campos,o usuário<br>
+      deve clicar em um botão jogar,então o sistema deve sortear um numero aleatório de 1 a 30 e verificar se esse número<br>
+      é par ou impar.Caso o número seja de acordo com o que o usuário apostou,deve-se somar a quantidade de pontos apostados<br>
+      aos seus pontos globais,caso diferente,deve-se subtrair esse valor.Não deve ser aceito nada além de valores numéricos no campo<br>
+      valor da resposta.O sistema deve apresentar ao usuário qual numero foi sorteado e informa-lo se o número é par ou impar.
     </p>
     <div class="content">
       <div class="form" >
@@ -30,8 +35,11 @@
         document.getElementById('customizarP').innerHTML = "Seus pontos : "+pontos;
         document.getElementById("botao").addEventListener("click",validarValor);
         function validarValor(){
-          if(document.getElementById('numeroAposta').value > pontos){
+          while(document.getElementById('numeroAposta').value > pontos){
             alert("Você não possui esse valor para apostar / Seus pontos: " + pontos);
+          }
+          while(document.getElementById('numeroAposta').value < 0){
+            alert("RECARREGUE SUA PÁGINA. error:Numero negativo não é permitido");
           }
         }
         document.getElementById("botao").addEventListener("click",ValidarAposta);
