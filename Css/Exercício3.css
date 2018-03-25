@@ -1,0 +1,47 @@
+#formulario{
+  display: flex;
+  justify-content: center;
+}
+.form{
+  background:linear-gradient(yellow,grey);
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 50px;
+  font-family:monospace;
+  letter-spacing: 1px;
+}
+input{
+  margin-bottom: 10px;
+  width: 400px;
+}
+#posicionarBotao{
+  display: flex;
+  justify-content: flex-end;
+}
+#botao{
+  border-radius: 5px 15px;
+  background:linear-gradient(yellow,grey);
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+#cartaoVisita{
+  display: none;
+  position: absolute;
+  border: solid blue;
+  width: 470px;
+  height: 150px;
+  left: 429px;
+  top: 200px;
+  color: white;
+  text-shadow: 1px 1px 3px white;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  padding-top: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+  font-family: monospace;
+  background-image: url(./img/paodeacucar.jpg);
+  background-size: 500px;
+}

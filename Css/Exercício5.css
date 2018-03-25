@@ -1,0 +1,38 @@
+.content{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 200px;
+}
+.form{
+  border: 1px solid;
+  border-radius: 10px;
+  width: 500px;
+  height: 300px;
+  padding: 30px;
+  background-image: url(./img/fundoo.jpg);
+  background-size: 600px;
+}
+
+input{
+  margin: 10px;
+  width: 40px;
+  border-radius: 10px;
+}
+#customizarP{
+  position: relative;
+  bottom: 30px;
+}
+.posiçaoConteudo{
+  position: relative;
+  top: 5px;
+  padding: 20px;
+}
+#botao{
+  position: relative;
+  left: 65px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px black;
+  color: white;
+}

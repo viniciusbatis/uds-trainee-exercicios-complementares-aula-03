@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Css/Exercício3.css">
+    <title>Exercício3</title>
+  </head>
+  <body>
+    <p>Vamos criar um gerador de cartão de visita.O usuário deve preencher um formulários<br>
+       com os campos nome,telefone e endereço.Ao enviar o formulário deve-se apresentar<br>
+       uma div formatada como um cartão de visita apresentando as informações preenchidas<br>
+       previamente.
+    </p>
+    <div id="formulario">
+      <form class="form">
+        <div class="estilizarForm">
+            <label>Digite seu nome:<br> </label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <div class="estilizarForm">
+            <label>Digite seu telefone:<br> </label>
+            <input type="number" name="telefone" id="telefone">
+        </div>
+        <div class="estilizarForm">
+            <label>Digite seu endereço:<br> </label>
+            <input type="text" name="endereço" id="endereco">
+        </div>
+        <div id="posicionarBotao" onclick="chamarDivCartaoVisita()">
+            <button type="button" id="botao" name="button">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <div id="cartaoVisita">
+
+    </div>
+    <script>
+      function chamarDivCartaoVisita(){
+        document.getElementById('formulario').style.display = 'none';
+        document.getElementById('cartaoVisita').style.display = 'block';
+        var nome = document.getElementById('nome').value;
+        var telefone = document.getElementById('telefone').value;
+        var endereco = document.getElementById('endereco').value;
+        document.getElementById('cartaoVisita').innerHTML = "Estou muito grato por comparecer ao evento. Para mais informações ligue para " + telefone + " ou me procure no seguinte endereço: " + endereco;
+      }
+
+    </script>
+  </body>
+</html>

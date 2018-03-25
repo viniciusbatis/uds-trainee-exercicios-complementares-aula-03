@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Css/Exercício5.css">
+    <title>Exercício5</title>
+  </head>
+  <body>
+    <p>
+
+    </p>
+    <div class="content">
+      <div class="form" >
+        <p id="customizarP">Seus pontos: n</p>
+        <div class="posiçaoConteudo">
+            <div>
+              <input type="radio" name="escolha" value="par">Par
+              <input type="radio" name="escolha" value="impar">Impar
+            </div>
+            <div>
+              <label for="msg">Digite o valor de sua aposta: </label>
+              <input type="number" name="msg" id="numeroAposta">
+            </div>
+            <button id="botao">JOGAR</button>
+        </div>
+      </div>
+    </div>
+      <script>
+        var pontos = 100;
+        document.getElementById('customizarP').innerHTML = "Seus pontos : "+pontos;
+        document.getElementById("botao").addEventListener("click",validarValor);
+        function validarValor(){
+          if(document.getElementById('numeroAposta').value > pontos){
+            alert("Você não possui esse valor para apostar / Seus pontos: " + pontos);
+          }
+        }
+        document.getElementById("botao").addEventListener("click",ValidarAposta);
+        function ValidarAposta(){
+          document.getElementById('customizarP').innerHTML = "Seus pontos : "+pontos;
+          var numeroDoSorteio = Math.floor(Math.random()*31);
+          if(numeroDoSorteio % 2 ==0){
+            var numeroSorteado = 'par';
+            var numeroSorteadoPar = 'par';
+          }else{
+            var numeroSorteado = 'impar';
+            var numeroSorteadoImpar = 'impar';
+          }
+           alert("Numero sorteado : " + numeroDoSorteio);
+          var aposta = document.querySelector('input[name="escolha"]:checked').value;
+            if(aposta == 'par'){
+              var apostaValorPar ='par';
+            }else{
+              var apostaValorImpar ='impar';
+            }
+            if(numeroSorteadoImpar == apostaValorImpar || numeroSorteadoPar == apostaValorPar){
+              alert("VOCE ACERTOU");
+              var pontosObtidos = parseInt(document.getElementById('numeroAposta').value);
+              pontos = pontos + pontosObtidos;
+            }
+            if(numeroSorteadoImpar == apostaValorPar || numeroSorteadoPar == apostaValorImpar){
+              alert("VOCE ERROU");
+              var pontosObtidos = parseInt(document.getElementById('numeroAposta').value);
+              pontos = pontos - pontosObtidos;
+            }
+            document.getElementById('customizarP').innerHTML = "Seus pontos : "+pontos;
+        }
+
+
+
+
+
+      </script>
+  </body>
+</html>

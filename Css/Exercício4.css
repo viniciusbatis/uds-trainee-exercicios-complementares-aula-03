@@ -1,0 +1,32 @@
+.formulário{
+  display: flex;
+  justify-content: center;
+}
+.forms{
+  background:linear-gradient(white,red);
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 10px;
+  font-family: monospace;
+  width: 400px;
+}
+input{
+  margin: 10px;
+}
+.pergunta{
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+#enviar{
+  margin-top: 7px;
+  position: relative;
+  left: 345px;
+  border-radius: 15px;
+  background: linear-gradient(white,red);
+}
+label{
+  color: black;
+  text-shadow: 1px 0px 3px white;
+  font-weight: bold;
+}

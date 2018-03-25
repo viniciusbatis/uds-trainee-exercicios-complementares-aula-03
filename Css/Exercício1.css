@@ -1,0 +1,53 @@
+.formulário{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 20px;
+}
+.form{
+  position: absolute;
+  border: 1px solid blue;
+  padding: 30px;
+  background-image:url(./img/fundoo.jpg);
+  border-radius: 5px;
+}
+label{
+font-size: 12px;
+font-style: italic;
+font-weight: bold;
+letter-spacing: 2px;
+color: white;
+text-shadow: 1px 1px 3px black;
+}
+input{
+  width: 400px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+.ApresentarInfo{
+border: solid;
+position: absolute;
+right: 2;
+}
+#MostrarInfo{
+  border: 1px solid blue;
+  width: 400px;
+  height: 100px;
+  padding: 30px;
+  position: absolute;
+  top: 450px;
+  left: 449px;
+  display: none;
+  background-image:url(./img/fundoo.jpg);
+  color: blue;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+#enviar{
+  font-weight: bold;
+  text-shadow: 1px 1px 3px black;
+  color: white;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Css/Exercício2.css">
+    <title>Exercício2</title>
+  </head>
+  <body>
+    <p>Crie um arquivo html com 10 divs e um botão.As divs devem ser circulos vermelhos posicionadas lado a lado<br>
+    de azul.Ao clicar novamente,o sistema deve voltar todas as divs para vermelho e realizar a operação anterior novamente.
+    via flex-box.Ao clicar no botão o sistema deve calcular um numero aleatório de 1 a 10 e pintar a div correspondente<br>
+    </p>
+    <div class="decoraçaoDoContent"></div>
+      <div class="content">
+        <div id="circulo1" class="circulos"></div>
+        <div id="circulo2" class="circulos"></div>
+        <div id="circulo3" class="circulos"></div>
+        <div id="circulo4" class="circulos"></div>
+        <div id="circulo5" class="circulos"></div>
+        <div id="circulo6" class="circulos"></div>
+        <div id="circulo7" class="circulos"></div>
+        <div id="circulo8" class="circulos"></div>
+        <div id="circulo9" class="circulos"></div>
+        <div id="circulo10" class="circulos"></div>
+        <button id="sortearNumero">CLIQUE</button>
+      </div>
+      <script>
+        document.getElementById("sortearNumero").addEventListener("click",sortearNum);
+          function sortearNum(){
+            var numeroSorteado = Math.floor(Math.random()*11);
+            if(numeroSorteado==1){
+              document.getElementById('circulo1').style.background = "blue";
+            }else if (numeroSorteado==2){
+              document.getElementById('circulo2').style.background = "blue";
+            }else if (numeroSorteado==3){
+              document.getElementById('circulo3').style.background = "blue";
+            }else if (numeroSorteado==4){
+              document.getElementById('circulo4').style.background = "blue";
+            }else if (numeroSorteado==5){
+              document.getElementById('circulo5').style.background = "blue";
+            }else if (numeroSorteado==6){
+              document.getElementById('circulo6').style.background = "blue";
+            }else if (numeroSorteado==7){
+              document.getElementById('circulo7').style.background = "blue";
+            }else if (numeroSorteado==8){
+              document.getElementById('circulo8').style.background = "blue";
+            }else if (numeroSorteado==9){
+              document.getElementById('circulo9').style.background = "blue";
+            }else if (numeroSorteado==10){
+              document.getElementById('circulo10').style.background = "blue";
+            }
+          }
+      </script>
+  </body>
+</html>

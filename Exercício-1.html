@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" type="text/css" href="Css/Exercício1.css">
+    <meta charset="utf-8">
+    <title>Exercício1</title>
+  </head>
+  <body>
+    <p>Precisamos criar um gerador de declarações.O usuário preenche um formulário e devolvemos a ele uma<br>
+       declaração preenchida.Para isso,você deve adicionar 4 campos de texto(nome completo,rg,cpf,cidade)<br>
+       em um arquivo html e estiliza-los conforme achar necessário.Sua aplicação deve pegar os dados informados<br>
+       neste campo e devolver o seguinte texto como conteúdo da página:<br>
+       "Eu,{nome completo},declaro estar participando do trainee da uds.";após este texto apresentar a cidade e <br>
+       a data atual escrita por extenso.
+    </p>
+        <div class="formulário">
+          <form class="form">
+            <div>
+              <label for="nome">NOME COMPLETO:<br></label>
+              <input type="text" id="nome" name="nomeCompleto">
+            </div>
+            <div>
+              <label for="numberRg">RG:<br></label>
+              <input type="number" id="numberRg" name="rg">
+            </div>
+            <div>
+              <label for="numberCpf">CPF:<br></label>
+              <input type="number" id="numberCpf" name="cpf">
+            </div>
+            <div>
+              <label for="cidade">CIDADE:<br></label>
+              <input type="text" id="cidade" name="cidade">
+            </div>
+            <div>
+              <button type="button" id="enviar" onclick="validarInfo()">Enviar</button>
+            </div>
+          </form>
+        </div>
+        <div id="MostrarInfo">
+
+        </div>
+          <script>
+            var data = new Date();
+            var dia = data.getDate();
+            var ano = data.getFullYear();
+            var month = new Array();
+            month[0] = 'Janeiro';
+            month[1] = 'Fevereiro';
+            month[2] = 'Março';
+            month[3] = 'Abril';
+            month[4] = 'Maio'
+            month[5] = 'Junho';
+            month[6] = 'Julho';
+            month[7] = 'Agosto';
+            month[8] = 'Setembro';
+            month[9] = 'Outubro';
+            month[10] = 'Novembro';
+            month[11] = 'Dezembro';
+            var mes = month[data.getMonth()];
+            function validarInfo(){
+              var nome = document.getElementById('nome').value;
+              var numeroRg = document.getElementById('numberRg').value;
+              var numeroCpf = document.getElementById('numberCpf').value;
+              var cidade = document.getElementById('cidade').value;
+              document.getElementById('MostrarInfo').style.display = 'block';
+              document.getElementById('MostrarInfo').innerHTML = "Eu," + nome + " declaro estar participando do trainee da uds.\n" + cidade + " " + dia + " de " + mes + " de " + ano;
+            }
+          </script>
+
+
+  </body>
+</html>

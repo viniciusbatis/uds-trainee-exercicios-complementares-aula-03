@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Css/Exercício4.css">
+    <title>Exercício4</title>
+  </head>
+  <body>
+    <p>Crie um formulário com 10 questões de verdadeiro ou falso.O usuário deve preencher<br>
+      um formulário com as questões,cada questão deve ter dois radio buttons com as respostas possíveis<br>
+      ao final do formulário deve existir um botão enviar.Ao clicar no botão deve-se validar as questões<br>
+      ,para cada resposta preenchida corretamente deve-se somar 1 ponto,para cada resposta errada ou em branco deve-se<br>
+      somar 0 pontos,e então apresentar a pontuação ao usuário.
+    </p>
+     <div class="formulário" id="resposta">
+       <form class="forms">
+         <div class="pergunta">
+           <label for="pergunta">Um violão comum possui 6 cordas ?<br></label>
+           <input type="radio" id="resposta1" name="resposta1" value="true">Verdadeiro
+           <input type="radio" id="resposta1" name="resposta1" value="false">Falso
+         </div>
+         <div class="pergunta">
+           <label for="pergunta">A palavra 'carro' possui 7 letras ?<br></label>
+           <input type="radio" id="resposta2" name="resposta2" value="true">Verdadeiro
+           <input type="radio" id="resposta2" name="resposta2" value="false">Falso
+         </div>
+         <div class="pergunta">
+           <label for="pergunta">O coelho gosta de cenoura ?<br></label>
+           <input type="radio" id="resposta3" name="resposta3" value="true">Verdadeiro
+           <input type="radio" id="resposta3" name="resposta3" value="false">Falso
+         </div>
+         <div class="pergunta">
+           <label for="pergunta">Jesus morreu com 33 anos ?<br></label>
+           <input type="radio" id="resposta4" name="resposta4" value="true">Verdadeiro
+           <input type="radio" id="resposta4" name="resposta4" value="false">Falso
+         </div>
+         <div class="pergunta">
+           <label for="pergunta">O Bailão é um bom professor ?<br></label>
+           <input type="radio" id="resposta5" name="resposta5" value="true">Verdadeiro
+           <input type="radio" id="resposta5" name="resposta5" value="false">Falso
+         </div>
+         <div class="pergunta">
+           <label for="pergunta">O Vinicius merece uma vaga na uds ?<br></label>
+           <input type="radio" id="resposta6" name="resposta6" value="true">Verdadeiro
+           <input type="radio" id="resposta6" name="resposta6" value="false">Falso
+         </div>
+         <div class="pergunta">
+           <label for="pergunta">O ser humano nasceu de uma fada ?<br></label>
+           <input type="radio" id="resposta7" name="resposta7" value="true">Verdadeiro
+           <input type="radio" id="resposta7" name="resposta7" value="false">Falso
+         </div>
+         <div class="pergunta">
+           <label for="pergunta">JavaScript é pouco utilizado ?<br></label>
+           <input type="radio" id="resposta8" name="resposta8" value="true">Verdadeiro
+           <input type="radio" id="resposta8" name="resposta8" value="false">Falso
+         </div>
+         <div class="pergunta">
+           <label for="pergunta">A UDS é uma empresa de tecnologia ?<br></label>
+           <input type="radio" id="resposta9" name="resposta9" value="true">Verdadeiro
+           <input type="radio" id="resposta9" name="resposta9" value="false">Falso
+         </div>
+         <div class="pergunta">
+           <label for="pergunta">O Igor merece um aumento ?<br></label>
+           <input type="radio" id="resposta10" name="resposta10" value="true">Verdadeiro
+           <input type="radio" id="resposta10" name="resposta10" value="false">Falso
+         </div>
+         <button id="enviar" onclick="validarInfo()">Enviar</button>
+      </form>
+     </div>
+     <script>
+       function validarInfo(){
+         var pontuacao = 0;
+         var primeiraPergunta = document.querySelector('input[name="resposta1"]:checked');
+         if (primeiraPergunta && primeiraPergunta.value == 'true') {
+            pontuacao++;
+         }else if((primeiraPergunta && primeiraPergunta.value == 'false') || !primeiraPergunta){
+            pontuacao=pontuacao;
+         }
+         var segundaPergunta = document.querySelector('input[name="resposta2"]:checked');
+           if ((segundaPergunta && segundaPergunta.value == 'true') || !segundaPergunta){
+              pontuacao=pontuacao;
+           }else if(segundaPergunta && segundaPergunta.value == 'false'){
+              pontuacao++;
+           }
+         var terceiraPergunta = document.querySelector('input[name="resposta3"]:checked');
+           if (terceiraPergunta && terceiraPergunta.value == 'true'){
+              pontuacao++;
+           }else if((terceiraPergunta && terceiraPergunta.value == 'false') || !terceiraPergunta){
+              pontuacao=pontuacao;
+           }
+         var quartaPergunta = document.querySelector('input[name="resposta4"]:checked');
+           if (quartaPergunta && quartaPergunta.value == 'true'){
+              pontuacao++;
+           }else if((quartaPergunta && quartaPergunta.value == 'false') || !quartaPergunta){
+              pontuacao=pontuacao;
+           }
+         var quintaPergunta = document.querySelector('input[name="resposta5"]:checked');
+           if (quintaPergunta && quintaPergunta.value == 'true'){
+              pontuacao++;
+           }else if((quintaPergunta && quintaPergunta.value == 'false') || !quintaPergunta){
+              pontuacao=pontuacao;
+           }
+         var sextaPergunta = document.querySelector('input[name="resposta6"]:checked');
+           if (sextaPergunta && sextaPergunta.value == 'true'){
+              pontuacao++;
+           }else if((sextaPergunta && sextaPergunta.value == 'false') || !sextaPergunta){
+              pontuacao=pontuacao;
+           }
+         var setimaPergunta = document.querySelector('input[name="resposta7"]:checked');
+           if ((setimaPergunta && setimaPergunta.value == 'true') || !setimaPergunta) {
+              pontuacao=pontuacao;
+           }else if(setimaPergunta && setimaPergunta.value == 'false'){
+              pontuacao++;
+           }
+         var oitavaPergunta = document.querySelector('input[name="resposta8"]:checked');
+           if ((oitavaPergunta && oitavaPergunta.value == 'true') || !oitavaPergunta){
+              pontuacao=pontuacao;
+           }else if(oitavaPergunta && oitavaPergunta.value == 'false'){
+              pontuacao++;
+           }
+         var nonaPergunta = document.querySelector('input[name="resposta9"]:checked');
+           if (nonaPergunta && nonaPergunta.value == 'true'){
+              pontuacao++;
+           }else if((nonaPergunta && nonaPergunta.value == 'false') || !nonaPergunta){
+              pontuacao=pontuacao;
+           }
+         var decimaPergunta = document.querySelector('input[name="resposta10"]:checked');
+           if (decimaPergunta && decimaPergunta.value == 'true'){
+              pontuacao++;
+           }else if((decimaPergunta && decimaPergunta.value == 'false') || !decimaPergunta){
+              pontuacao=pontuacao;
+           }
+           alert("SUA PONTUAÇÃO FOI DE : " + pontuacao);
+         }
+     </script>
+
+  </body>
+</html>
